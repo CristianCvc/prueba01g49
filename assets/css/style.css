@@ -1,0 +1,23 @@
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000000;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.quinsom{
+    color: #ffffff;
+}
+
+.secicon{
+    text-align: center;
+}

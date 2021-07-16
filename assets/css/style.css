@@ -12,6 +12,7 @@ h2 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    border-color: 007BFF;
 }
 
 .quinsom{
@@ -20,4 +21,8 @@ h2 {
 
 .secicon{
     text-align: center;
+}
+
+.colico{
+    color: #ffffff;
 }

@@ -23,7 +23,7 @@
 </head>
 <body>
 <!-- barra de navegación por bootstrap responsiva, en tamaños pequeños menu se comprime en sandwich-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+        <nav class="container navbar navbar-expand-lg navbar-dark bg-info fixed-top">
 <!-- logo viajes chile con altura y ancho definidos para responsividad y que no rompa la pagina-->
               <img src="assets/img/viajes.svg" class="ml-5" width="30rem" height="30rem" alt="logo Viajes">
               <a class="navbar-light ml-1 mr-auto" href="#inicio">Viajes Chile</a>
@@ -35,6 +35,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
+<!--links de nav con hashtags para que funcione smoothscroll de js-->
               <a class="nav-link" href="#top">Inicio</a>
               </li>
               <li class="nav-item">
@@ -49,8 +50,8 @@
               </ul>
               </div>
         </nav>
-       <!--Carrusel de imagenes de Bootstrap con jquery-->
-    <header id="top" class="text-light">
+<!--Carrusel de imagenes de Bootstrap con jquery-->
+    <header id="top" class="text-light container">
        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
@@ -73,6 +74,7 @@
             </a>
         </div>
     </header>
+<!--seccion con iconos de fontawesome que desaparecen en pantallas pequeñas-->
 <div class="row">
     <div class="d-none d-sm-none col-md-12 col-lg-12 d-lg-block">
         <h2 id="about">¿Quiénes somos?</h2>
@@ -103,7 +105,7 @@
         </div> 
     </div>
 </div>
-
+<!--seccion destacados con tarjetas bootstrap con popover y modal-->
 <h2 id="highlights">Destacados</h2>
 <div class="container barrasub"></div>
 <div class="row container centercon">
@@ -147,6 +149,7 @@
         </div>
     </div></a>
 </div>
+<!--modales de tarjetas-->
 <div class="modal fade" id="lorem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -223,11 +226,13 @@
       </div>
     </div>
   </div>
+<!--seccion de contacto con formulario de tipeform-->
 <h2 id="contact">Contacto</h2>
 <div class="container barrasub"></div>
 <div class="container bg-info mb-5">
 <div class="typeform-widget" data-url="https://form.typeform.com/to/CCyln4nB?typeform-medium=embed-snippet" data-transparency="55" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 </div>
+<!--pie de pagina con links a paginas en iconos de estas-->
 <footer class="container-fluid bg-info text-white">
     <div class="row">
         <div class="col">

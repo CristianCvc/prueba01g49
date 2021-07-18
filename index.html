@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- link cdn font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- link cdn google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <title>Viajes Chile</title>
     <!-- link a css propio -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -21,8 +25,8 @@
 <!-- barra de navegación por bootstrap responsiva, en tamaños pequeños menu se comprime en sandwich-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
 <!-- logo viajes chile con altura y ancho definidos para responsividad y que no rompa la pagina-->
-              <img src="assets/img/viajes.svg" width="30rem" height="30rem" alt="logo Viajes">
-              <a class="navbar-light mr-auto" href="#inicio">Viajes Chile</a>
+              <img src="assets/img/viajes.svg" class="ml-5" width="30rem" height="30rem" alt="logo Viajes">
+              <a class="navbar-light ml-1 mr-auto" href="#inicio">Viajes Chile</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -31,11 +35,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-              <a class="nav-link" href="#inicio">Inicio<span
-              class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#top">Inicio</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#aboutus">Quienes Somos</a>
+              <a class="nav-link" href="#about">Quienes Somos</a>
               </li>
               <li class="nav-item">
               <a class="nav-link" href="#highlights">Destacados</a>
@@ -47,7 +50,7 @@
               </div>
         </nav>
        <!--Carrusel de imagenes de Bootstrap con jquery-->
-    <header id="inicio" class="text-light">
+    <header id="top" class="text-light">
        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
@@ -72,26 +75,27 @@
     </header>
 <div class="row">
     <div class="d-none d-sm-none col-md-12 col-lg-12 d-lg-block">
-        <h2 id="aboutus">¿Quiénes somos?</h2>
-        <div class="row text-white">
-            <div class="col ml-3">
+        <h2 id="about">¿Quiénes somos?</h2>
+        <div class="container barrasub"></div>
+        <div class="row container text-justify centercon text-white">
+            <div class="col-4">
                 <div class="bg-info secicon">
-                    <i class="fas fa-plane"></i>
+                    <i class="fas fa-plane " data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Viajes en Avión"></i>
                 </div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta expedita, asperiores neque ut, quisquam voluptate perferendis vero est illo error laudantium architecto quibusdam dignissimos. Enim magni autem ea qui.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et odit quam placeat nostrum? Necessitatibus molestiae doloribus corporis, cumque, explicabo et deserunt ea soluta expedita, iusto illo voluptatem. Beatae, minus.
                 </p>
             </div>
-            <div class="col">
+            <div class="col-4">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta expedita, asperiores neque ut, quisquam voluptate perferendis vero est illo error laudantium architecto quibusdam dignissimos. Enim magni autem ea qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ducimus blanditiis est eos, neque ipsam et aut quis debitis quia distinctio animi optio cum nihil sed. Sunt sapiente error delectus.
                 </p>
                 <div class="bg-info secicon">
-                    <i class="fas fa-mountain"></i>
+                    <i class="fas fa-mountain" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Montañismo y Trekking"></i>
                 </div>
             </div>
-            <div class="col mr-3">
+            <div class="col-4">
                 <div class="bg-info secicon">
-                    <i class="fas fa-route"></i>
+                    <i class="fas fa-route" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Senderismo Guiado"></i>
                 </div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dicta expedita, asperiores neque ut, quisquam voluptate perferendis vero est illo error laudantium architecto quibusdam dignissimos. Enim magni autem ea qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo, odio ipsam nostrum sed, maiores nisi ad facere quis repudiandae soluta aut id impedit mollitia a voluptatibus nesciunt eligendi! Quisquam!
                 </p>
@@ -101,49 +105,130 @@
 </div>
 
 <h2 id="highlights">Destacados</h2>
-<div class="row container-fluid ml-1">
-    <div class="col">
-        <div class="card bg-info" style="width: 18rem;">
-            <img src="assets/img/card1.jpg" class="card-img-top" alt="Imagen Paisaje 1" height="200">
+<div class="container barrasub"></div>
+<div class="row container centercon">
+    <a data-toggle="modal" data-target="#lorem"><div class="col-3">
+        <div class="card bg-info" style="width: 15rem;" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Click Para Más Información">
+            <img src="assets/img/card1.jpg" class="card-img-top" alt="Imagen Río" height="200">
             <div class="card-body pb-0">
                 <h5 class="text-uppercase text-white">Lorem ipsum dolor, sit amet</h5>
-                <p class="my-0 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis id autem voluptas? Est corporis velit officia itaque, laborum facere eligendi repellendus totam magni. Numquam quisquam minus quidem ratione veniam quae?</p>
+                <p class="my-0 text-white" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis id autem voluptas? Est corporis velit officia itaque, laborum facere eligendi repellendus totam magni. Numquam quisquam minus quidem ratione veniam quae?</p>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card bg-info" style="width: 18rem;">
-            <img src="assets/img/card2.jpg" class="card-img-top" alt="Imagen Paisaje 2" height="200">
+    </div></a>
+    <a data-toggle="modal" data-target="#consectetur">
+    <div class="col-3">
+        <div class="card bg-info" style="width: 15rem;" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Click Para Más Información">
+            <img src="assets/img/card2.jpg" class="card-img-top" alt="Imagen Lago" height="200">
                 <div class="card-body pb-0">
                 <h5 class="text-uppercase text-white">consectetur adipisicing elit</h5>
-                <p class="my-0 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, optio necessitatibus ab aperiam id cumque. Incidunt ipsum eum, quae recusandae sequi id quaerat voluptatum, necessitatibus aut, fugit</p>
+                <p class="my-0 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, optio necessitatibus ab aperiam id cumque. Incidunt ipsum eum, quae recusandae sequi id quaerat voluptatum, necessitatibus aut, fugit aperiam id cumque</p>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card bg-info" style="width: 18rem;">
-            <img src="assets/img/card3.jpg" class="card-img-top" alt="Imagen Paisaje 3" height="200">
+    </div></a>
+    <a data-toggle="modal" data-target="#facere">
+    <div class="col-3">
+        <div class="card bg-info" style="width: 15rem;" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Click Para Más Información">
+            <img src="assets/img/card3.jpg" class="card-img-top" alt="Imagen Salar" height="200">
                 <div class="card-body pb-0">
                 <h5 class="text-uppercase text-white">Facere fugiat consequuntur deserunt</h5>
-                <p class="my-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est earum excepturi vel obcaecati iste dolor aliquid atque. Facere fugiat consequuntur deserunt, aperiam a odit magnam obcaecati autem</p>
+                <p class="my-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est earum excepturi vel obcaecati iste dolor aliquid atque. Facere fugiat consequuntur deserunt, aperiam a odit magnam Est earum excepturi adipisicing elit</p>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card bg-info" style="width: 18rem;">
-            <img src="assets/img/card4.jpg" class="card-img-top" alt="Imagen Paisaje 4" height="200">
+    </div></a>
+    <a data-toggle="modal" data-target="#magni">
+    <div class="col-3">
+        <div class="card bg-info" style="width: 15rem;" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Click Para Más Información">
+            <img src="assets/img/card4.jpg" class="card-img-top" alt="Imagen Bosque" height="200">
                 <div class="card-body pb-0">
                 <h5 class="text-uppercase text-white">Magni libero laboriosam</h5>
-                <p class="my-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatem labore! Mollitia, dolor quo! Magni libero laboriosam doloremque repudiandae? Magni quae asperiores veniam assumenda</p>
+                <p class="my-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatem labore! Mollitia, dolor quo! Magni libero laboriosam doloremque repudiandae? Magni quae asperiores veniam assumenda Neque, voluptatem labore adipisicing elit. Facilis id</p>
             </div>
         </div>
-    </div>
+    </div></a>
 </div>
+<div class="modal fade" id="lorem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lorem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="assets/img/card1.jpg" class="card-img-top" alt="Imagen Río">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, fuga tempora praesentium enim minus at rerum laborum, delectus voluptates maxime corporis esse autem, odio natus harum eius eveniet! Corrupti, quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ducimus maiores commodi animi possimus iste aperiam debitis totam nihil accusantium quos cum, fugit, magnam, odit id fugiat omnis deserunt nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam minus consequatur debitis aliquam, dolore, id cupiditate enim veritatis, voluptates blanditiis consequuntur fugit! Magnam sit delectus possimus, dolorum maxime Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit similique ut quis delectus quam ea ratione ipsam alias explicabo. Quos, voluptatibus ipsam? Facere provident harum exercitationem reiciendis, natus nihil earum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="consectetur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Consectetur</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="assets/img/card2.jpg" class="card-img-top" alt="Imagen Lago">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, fuga tempora praesentium enim minus at rerum laborum, delectus voluptates maxime corporis esse autem, odio natus harum eius eveniet! Corrupti, quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ducimus maiores commodi animi possimus iste aperiam debitis totam nihil accusantium quos cum, fugit, magnam, odit id fugiat omnis deserunt nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam minus consequatur debitis aliquam, dolore, id cupiditate enim veritatis, voluptates blanditiis consequuntur fugit! Magnam sit delectus possimus, dolorum maxime Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit similique ut quis delectus quam ea ratione ipsam alias explicabo. Quos, voluptatibus ipsam? Facere provident harum exercitationem reiciendis, natus nihil earum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="facere" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Facere</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="assets/img/card3.jpg" class="card-img-top" alt="Imagen Salar">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, fuga tempora praesentium enim minus at rerum laborum, delectus voluptates maxime corporis esse autem, odio natus harum eius eveniet! Corrupti, quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ducimus maiores commodi animi possimus iste aperiam debitis totam nihil accusantium quos cum, fugit, magnam, odit id fugiat omnis deserunt nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam minus consequatur debitis aliquam, dolore, id cupiditate enim veritatis, voluptates blanditiis consequuntur fugit! Magnam sit delectus possimus, dolorum maxime Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit similique ut quis delectus quam ea ratione ipsam alias explicabo. Quos, voluptatibus ipsam? Facere provident harum exercitationem reiciendis, natus nihil earum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="magni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Magni</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="assets/img/card4.jpg" class="card-img-top" alt="Imagen Bosque">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, fuga tempora praesentium enim minus at rerum laborum, delectus voluptates maxime corporis esse autem, odio natus harum eius eveniet! Corrupti, quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ducimus maiores commodi animi possimus iste aperiam debitis totam nihil accusantium quos cum, fugit, magnam, odit id fugiat omnis deserunt nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aperiam minus consequatur debitis aliquam, dolore, id cupiditate enim veritatis, voluptates blanditiis consequuntur fugit! Magnam sit delectus possimus, dolorum maxime Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit similique ut quis delectus quam ea ratione ipsam alias explicabo. Quos, voluptatibus ipsam? Facere provident harum exercitationem reiciendis, natus nihil earum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <h2 id="contact">Contacto</h2>
+<div class="container barrasub"></div>
 <div class="container bg-info mb-5">
 <div class="typeform-widget" data-url="https://form.typeform.com/to/CCyln4nB?typeform-medium=embed-snippet" data-transparency="55" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 </div>
-<footer class="bg-info text-white">
+<footer class="container-fluid bg-info text-white">
     <div class="row">
         <div class="col">
             <h2 class="text-uppercase mt-1 mb-0 font-weight-bold">viajes chile</h2>
@@ -158,7 +243,10 @@
     </div>  
 </footer>
 <!-- link a herramientas jquery por cdn -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!--link a script js propio-->
 <script src="assets/js/script.js"></script>
